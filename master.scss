@@ -1,0 +1,51 @@
+$heading: 700 4rem/1rem sans-serif;
+$text: 400 1.2rem/1.6rem sans-serif;
+$bg-colors: ( header-bg: #f3ad35, main-bg: #e4e4e4, footer-bg: #404560);
+$text-white: #f2f2f2;
+@each $name,
+$color in $bg-colors {
+    .#{$name} {
+        background: $color;
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+h1 {
+    font: $heading;
+}
+
+p {
+    font: $text;
+    text-align: justify;
+}
+
+header,
+main,
+footer {
+    padding: 1rem 3rem;
+}
+
+main {
+    display: flex;
+    // flex-flow: column;
+    justify-content: center;
+    .article {
+        max-width: 50rem;
+    }
+}
+
+footer {
+    margin-top: auto;
+    color: $text-white;
+}
